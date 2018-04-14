@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<htlm>
+  <head>
+    <title> confirmando mi peso </title>
+    <link rel="stylesheet" href="animate/animate.min.css">
+    <style>
+    body {
+      background: aqua;
+      text-align: center;
+      font-family: sans-serif;
+      color: black;
+    }
+
+    #div-myImage{
+      text-align: center;
+      width: 100%;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <h1 class="animated slideInLeft"> Tu peso en otro planeta </h1>
+     <p>Aqui veras los diferentes pesos que tienes dependiendo que planeta elijas </p>
+     <div id="div-myImage">
+        <img id="myImage" src="" width="10%" class="animated slideInLeft">
+     </div>
+
+     <div >
+        <p id="p1" class="animated slideInLeft"></p>
+     </div>
+
+      <script>
+      alert("Juguemos a saber nuestro peso en otro planeta");
+        var usuario = prompt("Cual es tu peso en kg?");
+        var planeta =parseInt (prompt("Elije tu planeta\n1) Martes\n2) Jupiter\n3) Saturno\n4) Venus\n5) Neptuno\n6) Urano\n7) Mercurio\n8) Plutón "));
+        var peso = parseInt(usuario);
+        var g_Saturno =  10.44;
+        var g_Venus = 8.87;
+        var g_Tierra = 9.8;
+        var g_Marte = 3.7;
+        var g_Jupiter = 24.8;
+        var g_Neptuno = 11.15;
+        var g_Urano = 8.69;
+        var g_Plutón = 0.62;
+        var g_Mercurio = 3.7;
+        var peso_final;
+        var nombre;
+        var datos;
+        if (planeta == 1)
+        {
+          peso_final = peso * g_Marte / g_Tierra;
+          nombre = "Marte";
+            document.getElementById("myImage").src = "imagenes/Marte.jpg";
+          document.getElementById("p1").innerHTML = "Siguiendo esta lista de los planetas de nuestro sistema solar llegamos a Marte, el que ocupa el cuarto lugar. Debido a su color se le ha bautizado como planeta rojo y comparte algunas características con nuestro planeta ya que tiene valles, montañas y agua congelada.";
+        }
+        else if(planeta == 2)
+         {
+           peso_final = peso * g_Jupiter / g_Tierra;
+           nombre = "Jupiter";
+           document.getElementById("myImage").src = "imagenes/Jupiter.jpg";
+           document.getElementById("p1").innerHTML  = " es el planeta más grande que hay en nuestro sistema (se considera que es 1000 veces más grande que la Tierra) y, en gran parte, está formado únicamente de gases como el helio o el hidrógeno. Tiene 12 lunas orbitando a su alrededor y cuenta con un sistema de anillos.";
+        }
+        else
+          {
+           peso_final = 123456789;
+           nombre = "Krypton";
+           datos = "";
+         }
+         if (planeta == 3)
+         {
+           peso_final = peso * g_Saturno / g_Tierra;
+           nombre = "Saturno";
+           document.getElementById("myImage").src = "imagenes/Saturno.jpg";
+           document.getElementById("p1").innerHTML  = "este planeta es reconocido por sus anillos (más de 10.000) conformados de roca y de hielo. Se trata también de un planeta esencialmente formado por gases.";
+         }
+         else if (planeta == 4)
+         {
+           peso_final = peso * g_Venus / g_Tierra;
+           nombre = "Venus";
+           document.getElementById("myImage").src = "imagenes/Venus.png";
+           document.getElementById("p1").innerHTML  = "este es el planeta más similar a la Tierra debido a que tiene un tamaño muy similar, así como la densidad y el volumen. La característica de este planeta del sistema solar es que su rotación la realiza en sentido contrario que los demás planetas.";
+         }
+         else if (planeta == 5)
+         {
+           peso_final = peso * g_Neptuno / g_Tierra;
+           nombre = "Neptuno";
+           document.getElementById("myImage").src = "imagenes/Neptuno.jpg";
+           document.getElementById("p1").innerHTML  = "es el planeta que está más lejos del sol y, por este motivo, su temperatura es muy fría.";
+         }
+         else if (planeta == 6)
+         {
+           peso_final = peso * g_Urano  / g_Tierra;
+           nombre = "Urano ";
+           document.getElementById("myImage").src = "imagenes/Urano.jpg";
+           document.getElementById("p1").innerHTML  = " es un planeta que tiene una característica muy marcada y es que orbita de costado algo que hace que los cambios de estaciones sean muy extremos y que se alarguen durante largo tiempo. Se trata del tercer planeta más grande de nuestro sistema solar.";
+         }
+         else if (planeta == 7)
+         {
+           peso_final = peso * g_Mercurio / g_Tierra;
+           nombre = "Mercurio";
+           document.getElementById("myImage").src = "imagenes/Mercurio.jpg";
+           document.getElementById("p1").innerHTML  = "es el planeta que está más cerca del Sol y, también, es el más pequeño que tenemos en todo el sistema solar. De hecho, su tamaño es ligeramente mayor que el de la Luna. Al estar tan cerca del astro rey, la zona que está en contacto con los rayos está quemada y, por contra, la cara que está en la sombra se enfría muchísimo llegando al nivel de congelación.";
+         }
+          else if (planeta == 8) {
+                peso_final = peso * g_Plutón / g_Tierra;
+                nombre = "Plutón";
+                document.getElementById("myImage").src = "imagenes/Pluton.jpg";
+                document.getElementById("p1").innerHTML  = "designado 134340 Plutones, es un planeta enano del sistema solar situado a continuación de la órbita de Neptuno. Su nombre se debe al dios mitológico Romano Plutón (Hades según los griegos).";
+         }
+        peso_final = parseInt(peso_final);
+        document.write("Sabias que? "   + datos  );
+        document.write ("tu peso en "+ nombre + " es <strong>" + peso_final + " kilos</strong> <br>");
+      </script>
+       <br>
+       <br>
+      <cite>by: Raudy Beltre</cite>
+  </body>
+</html>
